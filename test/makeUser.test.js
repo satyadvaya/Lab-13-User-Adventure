@@ -8,11 +8,11 @@ test('makes a user object in plain JS from a formData object', function(assert) 
     // Set up your parameters and expectations
     const formData = new FormData();
 
-    formData.set('name', 'Alan');
+    formData.set('name', 'alan');
     formData.set('class', 'wizard');
 
     const expected = {
-        name: 'Alan',
+        name: 'alan',
         class: 'wizard',
         completed: {},
         HP: 50,
@@ -22,7 +22,8 @@ test('makes a user object in plain JS from a formData object', function(assert) 
     //Act 
     // Call the function you're testing and set the result to a const
     const userObject = makeUser(formData);
+    
     //Assert
     // Make assertions about what is expected valid result
-    assert.deepequal(expected, userObject);
+    assert.deepEqual(expected, userObject);
 });
